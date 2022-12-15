@@ -19,9 +19,9 @@ Mitch lives in Nashville, TN. Outside of work, he enjoys rock climbing, hiking, 
 
 ## Tools
 
-* Technology: Python, R, Docker, Git, Flask, cloud (GCP and AWS)
-* Methods: NLP, language modeling, deep learning, Bayesian statistics, causal inference
-* Libraries: PyTorch, Hugging Face (Transformers, Tokenizers, Datasets), scikit-learn, XGBoost, spaCy
+* Technology: Python, R, Docker, Git, Flask, cloud (GCP and AWS), Dash, shiny, RMarkdown
+* Methods: NLP, language modeling, deep learning, Bayesian statistics, causal inference, data visualization
+* Libraries: PyTorch, Hugging Face (Transformers, Tokenizers, Datasets), scikit-learn, XGBoost, spaCy, matplotlib, plotly, ggplot2
 
 ## Experience
 
