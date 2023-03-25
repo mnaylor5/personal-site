@@ -13,7 +13,7 @@ output: postcards::solana
 
 ## Bio
 
-Mitchell Naylor is an applied machine learning professional with practical experience in natural language processing (NLP), statistical modeling, and deep learning. Mitch currently works as a lead data scientist at Azra AI, where he develops, improves, and deploys clinical NLP models. Additionally, Mitch leads applied research efforts in areas including transfer learning, language modeling, robustness, and model fairness.
+Mitchell Naylor is an applied machine learning professional with practical experience in natural language processing (NLP), statistical modeling, and deep learning. Mitch currently works as a lead data scientist at Azra AI, where he develops, improves, and deploys clinical NLP models. Additionally, Mitch leads applied research efforts in areas including language modeling, transfer learning, robustness, and model fairness.
 
 Mitch lives in Nashville, TN. Outside of work, he enjoys rock climbing, hiking, music, and traveling.
 
@@ -43,7 +43,12 @@ M.S. Analytics | January 2019 - December 2020
 
 B.S. Business Analytics | August 2012 - May 2016
 
-## Publications
+## Open Source + Publications
+
+Implemented **MEGA** into Hugging Face's `transformers` library
+
+* [Link to pull request](https://github.com/huggingface/transformers/pull/21766) 
+* [Link toodel documentation](https://huggingface.co/docs/transformers/main/en/model_doc/mega)
 
 **Causal ML Textbook** | Co-author | Work in progress -- link coming soon!
 
