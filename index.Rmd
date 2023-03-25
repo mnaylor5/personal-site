@@ -48,7 +48,7 @@ B.S. Business Analytics | August 2012 - May 2016
 Implemented **MEGA** into Hugging Face's `transformers` library
 
 * [Link to pull request](https://github.com/huggingface/transformers/pull/21766) 
-* [Link toodel documentation](https://huggingface.co/docs/transformers/main/en/model_doc/mega)
+* [Link to model documentation](https://huggingface.co/docs/transformers/main/en/model_doc/mega)
 
 **Causal ML Textbook** | Co-author | Work in progress -- link coming soon!
 
