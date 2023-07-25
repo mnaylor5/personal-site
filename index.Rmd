@@ -19,15 +19,13 @@ Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking
 
 ## Tools
 
-* Technology: Python, R, Docker, Git, Flask, cloud (GCP and AWS), Dash, shiny, RMarkdown
-* Methods: NLP, language modeling, deep learning, Bayesian statistics, causal inference, data visualization
-* Libraries: PyTorch, Hugging Face (Transformers, Tokenizers, Datasets), scikit-learn, XGBoost, spaCy, matplotlib, plotly, ggplot2
+* Technology: Python, R, Docker, Git, Flask, cloud (GCP and AWS), Dash, Shiny, RMarkdown
+* Methods: NLP, language modeling, deep learning, Bayesian statistics, causal inference, data visualization, experimental design
+* Libraries: PyTorch, Hugging Face (Transformers, Tokenizers, Datasets), pandas, NumPy, scikit-learn, XGBoost, spaCy, matplotlib, plotly, ggplot2, tidyverse
 
 ## Experience
 
 **Azra AI** | Lead Data Scientist | October 2019 - Present
-
-* Part of Digital Reasoning until spin-off in January 2022
 
 **Asurion** | Data Scientist | March 2018 - October 2019
 
@@ -35,13 +33,9 @@ Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking
 
 ## Education
 
-**Georgia Institute of Technology** | Atlanta, GA / Online
+**Georgia Institute of Technology** | M.S. Analytics | Completed December 2020
 
-M.S. Analytics | January 2019 - December 2020
-
-**University of Tennessee** | Knoxville, TN
-
-B.S. Business Analytics | August 2012 - May 2016
+**University of Tennessee** | B.S. Business Analytics | Completed May 2016
 
 ## Open Source + Publications
 
