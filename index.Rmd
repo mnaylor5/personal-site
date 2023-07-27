@@ -29,8 +29,9 @@ Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking
 
 * Build, improve, deploy, monitor, and maintain NLP models in cloud-based production environments
 * Use PyTorch and Hugging Face to build deep learning models for text classification and named entity recognition
-* Lead applied research initiatives in areas such as language modeling, robustness, fairness, and explainability
-* Bring promising research prototypes into production 
+* Lead applied research initiatives, with a focus on bringing promising prototypes into production 
+* Communicate impact and findings to stakeholders of varied technical and clinical backgrounds
+* Participate in code review, process improvement, and knowledge sharing
 
 **Asurion** | Data Scientist | March 2018 - October 2019
 
@@ -48,7 +49,7 @@ Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking
 
 ## Open Source + Publications
 
-Author of *Applied Causal Inference* | [Web link](https://appliedcausalinference.github.io/)
+Author of *Applied Causal Inference* textbook | [LeanPub link](https://leanpub.com/appliedcausalinference) - releasing summer 2023, pre-release version available upon request
 
 Implemented **MEGA** into Hugging Face's `transformers` library
 
