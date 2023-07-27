@@ -25,11 +25,20 @@ Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking
 
 ## Experience
 
-**Azra AI** | Lead Data Scientist | October 2019 - Present
+**Azra AI** | Lead Data Scientist | October 2019 - Present 
+
+* Build, improve, deploy, monitor, and maintain NLP models in cloud-based production environments
+* Use PyTorch and Hugging Face to build deep learning models for text classification and named entity recognition
+* Lead applied research initiatives in areas such as language modeling, robustness, fairness, and explainability
+* Bring promising research prototypes into production 
 
 **Asurion** | Data Scientist | March 2018 - October 2019
 
+* Applied methods from NLP, statistical inference, and operations research to solve a diverse set of business problems
+
 **GEICO** | Product Modeling Analyst III | June 2016 - March 2018
+
+* Built and maintained statistical models for customer behavior prediction within various pricing scenarios
 
 ## Education
 
