@@ -13,14 +13,14 @@ output: postcards::solana
 
 ## Bio
 
-Mitchell Naylor is an applied machine learning professional with practical experience in natural language processing (NLP), statistical modeling, and deep learning. Mitch currently works as a lead data scientist at Azra AI, where he develops, improves, and deploys clinical NLP models. Additionally, Mitch leads applied research efforts in areas including language modeling, transfer learning, robustness, and model fairness.
+Mitchell Naylor is an applied machine learning professional with extensive experience in natural language processing (NLP), statistical modeling, and deep learning. Mitch currently works as a lead data scientist at Azra AI, where he develops, improves, and deploys clinical NLP models. Additionally, Mitch leads applied research efforts in areas including language modeling, transfer learning, robustness, and model fairness. In addition to his work at Azra AI, Mitch is an author of [Applied Causal Inference](https://appliedcausalinference.github.io/aci_book/), which released in August 2023.
 
 Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking, music, and traveling.
 
 ## Tools
 
-* Technology: Python, R, Docker, Git, Flask, cloud (GCP and AWS), Dash, Shiny, RMarkdown
-* Methods: NLP, language modeling, deep learning, Bayesian statistics, causal inference, data visualization, experimental design
+* Technology: Python, R, Docker, Git, Flask, cloud (GCP and AWS), Dash, Shiny, RMarkdown, SQL
+* Methods: NLP, language modeling, model evaluation, deep learning, Bayesian statistics, causal inference, data visualization, experimental design, data manipulation
 * Libraries: PyTorch, Hugging Face (Transformers, Tokenizers, Datasets), pandas, NumPy, scikit-learn, XGBoost, spaCy, matplotlib, plotly, ggplot2, tidyverse
 
 ## Experience
@@ -32,6 +32,7 @@ Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking
 * Lead applied research initiatives, with a focus on bringing promising prototypes into production 
 * Communicate impact and findings to stakeholders of varied technical and clinical backgrounds
 * Participate in code review, process improvement, and knowledge sharing
+* *Note*: Azra AI spun out as a standalone company in January 2022, previously part of Digital Reasoning
 
 **Asurion** | Data Scientist | March 2018 - October 2019
 
@@ -49,7 +50,7 @@ Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking
 
 ## Open Source + Publications
 
-Author of *Applied Causal Inference* textbook | [LeanPub link](https://leanpub.com/appliedcausalinference) - releasing summer 2023, pre-release version available upon request
+Author of [Applied Causal Inference](https://appliedcausalinference.github.io/aci_book/), released August 2023
 
 Implemented **MEGA** into Hugging Face's `transformers` library
 
