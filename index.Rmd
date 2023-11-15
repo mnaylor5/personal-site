@@ -27,20 +27,28 @@ Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking
 
 **Azra AI** | Lead Data Scientist | October 2019 - Present 
 
-* Build, improve, deploy, monitor, and maintain NLP models in cloud-based production environments
+* Serve as technical leader on a team whose models identify high-risk clinical findings for hundreds of thousands of patients in the US annually
+* Build, improve, and monitor NLP model pipelines in cloud-based production environments
 * Use PyTorch and Hugging Face to build deep learning models for text classification and named entity recognition
-* Lead applied research initiatives, with a focus on bringing promising prototypes into production 
+* Design and optimize Docker containers for efficient deployment in cloud-based production environments
 * Communicate impact and findings to stakeholders of varied technical and clinical backgrounds
-* Participate in code review, process improvement, and knowledge sharing
+* Lead applied research initiatives, with a focus on bringing promising prototypes into production 
+* Assess cutting-edge ML algorithms and bring promising research prototypes into production
+* Develop best practices for robust evaluation of model performance and minimizing sample bias in modeling data
+* Contribute to strategic planning for the development of new products and relevant ML needs
+* Streamline processes for repeatability and scalability, including developing Python packages for internal use
 * *Note*: Azra AI spun out as a standalone company in January 2022, previously part of Digital Reasoning
 
 **Asurion** | Data Scientist | March 2018 - October 2019
 
 * Applied methods from NLP, statistical inference, and operations research to solve a diverse set of business problems
+* Communicated findings to stakeholders ranging from highly technical to C-level
 
 **GEICO** | Product Modeling Analyst III | June 2016 - March 2018
 
-* Built and maintained statistical models for customer behavior prediction within various pricing scenarios
+* Built predictive models for customer behavior under various pricing scenarios
+* Conducted robust statistical analyses in support of pricing department
+
 
 ## Education
 
@@ -56,6 +64,8 @@ Implemented **MEGA** into Hugging Face's `transformers` library
 
 * [Link to pull request](https://github.com/huggingface/transformers/pull/21766) 
 * [Link to model documentation](https://huggingface.co/docs/transformers/main/en/model_doc/mega)
+
+**Using Machine Learning to Accelerate Identification of Pancreatic Incidentalomas** | Poster appearing at AONN+ 2023 
 
 **Quantifying Explainability in NLP and Analyzing Algorithms for Performance-Explainability Tradeoff** | Interpretable Healthcare in Machine Learning (IMLH) at ICML 2021 | [Paper link](https://arxiv.org/abs/2107.05693)
 
