@@ -13,26 +13,28 @@ output: postcards::solana
 
 ## Bio
 
-Mitchell Naylor is an applied machine learning professional with extensive experience in natural language processing (NLP), statistical modeling, and deep learning. Mitch currently works as a senior applied researcher at GitHub, where he leads a team of machine learning scientists to develop new experiences and improve existing features within GitHub Copilot. Mitch is also an author of [_Applied Causal Inference_](https://appliedcausalinference.github.io/aci_book/), which released in August 2023.
+Mitchell Naylor is an applied machine learning professional with extensive experience in natural language processing (NLP), statistical modeling, and deep learning. Mitch currently works as a senior applied researcher at GitHub, where he leads a team of machine learning scientists to develop new AI-powered products and improve existing features within GitHub Copilot. Mitch is also an author of [_Applied Causal Inference_](https://appliedcausalinference.github.io/aci_book/), which released in August 2023.
 
 Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking, music, and traveling.
 
 ## Tools
 
-* Technology: Python, R, Docker, Git, Flask, cloud (GCP, Azure, and AWS), Dash, Shiny, RMarkdown, SQL
-* Methods: NLP, large language models (LLMs), language modeling, model evaluation, deep learning, Bayesian statistics, causal inference, data visualization, experimental design, data manipulation
-* Libraries: PyTorch, Hugging Face (Transformers, Tokenizers, Datasets), pandas, NumPy, scikit-learn, XGBoost, spaCy, matplotlib, plotly, ggplot2, tidyverse
+* Technology: Python, Docker, Git, cloud (GCP, Azure, and AWS), Dash, SQL, Kusto, Go, TypeScript, R
+* Methods: NLP, large language models (LLMs), language modeling, machine learning, model evaluation, deep learning, Bayesian statistics, causal inference, data visualization, experimental design, data manipulation
+* Libraries: PyTorch, Hugging Face, pandas, NumPy, scikit-learn, XGBoost, spaCy, matplotlib, plotly, ggplot2, tidyverse
 
 ## Experience
 
 ##### **GitHub** | Senior Applied Researcher | April 2024 - Present
 
-* Lead a team of 4 ML researchers in collaborations with product and engineering teams, working to develop new features and experiences across the GitHub Copilot ecosystem
-* Fine-tune large language models (LLMs) to perform various software engineering tasks
-* Evaluate new LLMs for novel tasks within GitHub Copilot
-* Develop and improve offline evaluation capabilities to measure the quality of generated code
-* Correspond with external LLM providers to identify potential collaboration opportunities 
-* _Key projects_: [Copilot Code Review](https://docs.github.com/en/copilot/using-github-copilot/code-review) (Applied Science tech lead), LLM fine-tuning for code completion
+* Lead an embedded team of 6 applied researchers, serving as the primary tech lead from Applied Science driving cross-functional collaboration with product, engineering, and design teams
+* Develop new AI-powered experiences within GitHub Copilot, leveraging cutting-edge LLMs to deliver new features for millions of developers   
+* Design agentic systems to accomplish complex software engineering tasks  
+* Fine-tune LLMs to improve code generation quality  
+* Mentor junior team members through pairing and sharing knowledge of ML best practices  
+* Conduct A/B tests to quantify model improvements, delivering statistically significant performance gains in production  
+* Act as a key member of the hiring team for applied researchers, including designing technical interview material and assessing prospective team members   
+* *Key projects*: [Copilot Code Review](https://github.blog/changelog/2025-04-04-copilot-code-review-now-generally-available/) (Applied Science tech lead); fine-tuning for code completion
 
 
 ##### **Azra AI** | Lead Data Scientist | October 2019 - March 2024 
@@ -75,7 +77,7 @@ Implemented **MEGA** into Hugging Face's `transformers` library
 * [Link to pull request](https://github.com/huggingface/transformers/pull/21766) 
 * [Link to model documentation](https://huggingface.co/docs/transformers/main/en/model_doc/mega)
 
-**Using Machine Learning to Accelerate Identification of Pancreatic Incidentalomas** | Poster appeared at AONN+ 2023 
+**Using Machine Learning to Accelerate Identification of Pancreatic Incidentalomas** | Journal of Oncology Navigation and Survivorship, 2023 | [Paper link](https://www.jons-online.com/issues/2023/october-2023-vol-14-no-10/category-vii-operations-management-organizational-development-health-economics#G7)
 
 **Quantifying Explainability in NLP and Analyzing Algorithms for Performance-Explainability Tradeoff** | Interpretable Healthcare in Machine Learning (IMLH) at ICML 2021 | [Paper link](https://arxiv.org/abs/2107.05693)
 
