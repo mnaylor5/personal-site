@@ -13,7 +13,7 @@ output: postcards::solana
 
 ## Bio
 
-Mitchell Naylor is an applied machine learning professional with extensive experience in natural language processing (NLP), statistical modeling, and deep learning. Mitch currently works as a senior applied researcher at GitHub, where he leads a team of machine learning scientists to develop new AI-powered products and improve existing features within GitHub Copilot. Mitch is also an author of [_Applied Causal Inference_](https://appliedcausalinference.github.io/aci_book/), which released in August 2023.
+Mitch Naylor a machine learning and AI scientist with extensive experience in natural language processing (NLP), statistical modeling, and deep learning. Mitch currently works as a senior applied researcher at GitHub, where he leads a team of machine learning scientists to develop new AI-powered products and improve existing features within GitHub Copilot. Mitch is also an author of [_Applied Causal Inference_](https://appliedcausalinference.github.io/aci_book/), which released in August 2023.
 
 Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking, music, and traveling.
 
@@ -27,28 +27,22 @@ Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking
 
 ##### **GitHub** | Senior Applied Researcher | April 2024 - Present
 
-* Lead an embedded team of 6 applied researchers, serving as the primary tech lead from Applied Science driving cross-functional collaboration with product, engineering, and design teams
+* Lead an embedded team of 6 applied researchers, serving as the primary tech lead from Applied Science driving cross-functional collaboration with product, engineering, and design teams  
 * Develop new AI-powered experiences within GitHub Copilot, leveraging cutting-edge LLMs to deliver new features for millions of developers   
-* Design agentic systems to accomplish complex software engineering tasks  
-* Fine-tune LLMs to improve code generation quality  
+* Design agentic systems to accomplish complex software engineering tasks, such as reviewing pull requests (see [Copilot Code Review](https://github.blog/changelog/2025-04-04-copilot-code-review-now-generally-available/))  
+* Fine-tune LLMs using LoRA to improve code generation quality  
 * Mentor junior team members through pairing and sharing knowledge of ML best practices  
 * Conduct A/B tests to quantify model improvements, delivering statistically significant performance gains in production  
-* Act as a key member of the hiring team for applied researchers, including designing technical interview material and assessing prospective team members   
-* *Key projects*: [Copilot Code Review](https://github.blog/changelog/2025-04-04-copilot-code-review-now-generally-available/) (Applied Science tech lead); fine-tuning for code completion
+* Act as a key member of the hiring team for applied researchers, including designing technical interview material and assessing prospective team members 
 
 
 ##### **Azra AI** | Lead Data Scientist | October 2019 - March 2024 
 
-* Served as technical leader on a team whose models identify high-risk clinical findings for hundreds of thousands of patients in the US annually
-* Built, improved, and monitored NLP model pipelines in cloud-based production environments
-* Used PyTorch and Hugging Face to build deep learning models for text classification and named entity recognition
-* Designed and optimized Docker containers for efficient deployment in cloud-based production environments
-* Communicated impact and findings to stakeholders of varied technical and clinical backgrounds
-* Led applied research initiatives, with a focus on bringing promising prototypes into production 
-* Assessed cutting-edge ML algorithms and bring promising research prototypes into production
-* Developed best practices for robust evaluation of model performance and minimizing sample bias in modeling data
-* Contributed to strategic planning for the development of new products and relevant ML needs
-* Streamlined processes for repeatability and scalability, including developing Python packages for internal use
+* Led research on efficient architectures for long-context NLP, implementing and adapting emerging methods (including MEGA architecture contribution to Hugging Face Transformers) for clinical NLP  
+* Designed pretraining and domain-adaptation pipelines, producing language models optimized for deployment on resource-constrained hardware  
+* Built and deployed clinical NLP models (NER, classification) identifying high-risk findings for 200k+ patients annually, enabling early detection and faster treatment  
+* Drove technical strategy for ML product development, evaluating cutting-edge research and rapidly prototyping novel architectures for production deployment  
+* Collaborated with clinical stakeholders to ensure model accuracy and reliability met the high standards required for cancer detection workflows
 * *Note*: Azra AI spun out as a standalone company in January 2022, previously part of Digital Reasoning
 
 ##### **Asurion** | Data Scientist | March 2018 - October 2019
