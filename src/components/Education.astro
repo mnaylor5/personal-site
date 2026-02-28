@@ -1,0 +1,85 @@
+---
+interface Degree {
+  institution: string;
+  degree: string;
+  completed: string;
+}
+
+const degrees: Degree[] = [
+  {
+    institution: 'Georgia Institute of Technology',
+    degree: 'M.S. Analytics',
+    completed: 'December 2020',
+  },
+  {
+    institution: 'University of Tennessee',
+    degree: 'B.S. Business Analytics',
+    completed: 'May 2016',
+  },
+];
+---
+
+<section id="education" aria-labelledby="education-heading">
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <h2 id="education-heading" class="section-heading">Education</h2>
+
+    <div class="edu-grid">
+      {degrees.map((d) => (
+        <div class="edu-card">
+          <p class="edu-degree">{d.degree}</p>
+          <p class="edu-institution">{d.institution}</p>
+          <p class="edu-completed">Completed {d.completed}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .edu-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .edu-card {
+    background-color: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .edu-degree {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .edu-institution {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-top: 0.2rem;
+  }
+
+  .edu-completed {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+</style>

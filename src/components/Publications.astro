@@ -1,0 +1,188 @@
+---
+interface Publication {
+  title: string;
+  venue?: string;
+  year?: string;
+  links: { label: string; href: string }[];
+  description?: string;
+}
+
+const publications: Publication[] = [
+  {
+    title: 'Applied Causal Inference',
+    description: 'Authored the book <em>Applied Causal Inference</em>, released August 2023.',
+    links: [
+      { label: 'Read online', href: 'https://appliedcausalinference.github.io/aci_book/' },
+    ],
+  },
+  {
+    title: 'MEGA implementation in Hugging Face Transformers',
+    description: 'Implemented the MEGA architecture into Hugging Face\'s <code>transformers</code> library.',
+    links: [
+      { label: 'Pull request', href: 'https://github.com/huggingface/transformers/pull/21766' },
+      { label: 'Model docs', href: 'https://huggingface.co/docs/transformers/main/en/model_doc/mega' },
+    ],
+  },
+  {
+    title: 'Using Machine Learning to Accelerate Identification of Pancreatic Incidentalomas',
+    venue: 'Journal of Oncology Navigation and Survivorship',
+    year: '2023',
+    links: [
+      { label: 'Paper', href: 'https://www.jons-online.com/issues/2023/october-2023-vol-14-no-10/category-vii-operations-management-organizational-development-health-economics#G7' },
+    ],
+  },
+  {
+    title: 'Quantifying Explainability in NLP and Analyzing Algorithms for Performance-Explainability Tradeoff',
+    venue: 'Interpretable ML in Healthcare (IMLH) at ICML',
+    year: '2021',
+    links: [
+      { label: 'arXiv', href: 'https://arxiv.org/abs/2107.05693' },
+    ],
+  },
+  {
+    title: 'PsychBERT: A Mental Health Language Model for Social Media Mental Health Behavioral Analysis',
+    venue: 'IEEE International Conference on Bioinformatics and Biomedicine (BIBM)',
+    year: '2021',
+    links: [
+      { label: 'Paper', href: 'https://ieeexplore.ieee.org/document/9669469' },
+      { label: 'Pretrained model', href: 'https://huggingface.co/mnaylor/psychbert-cased' },
+    ],
+  },
+  {
+    title: 'Transformers for Machine Learning: A Deep Dive',
+    description: 'Code contributions for the textbook by Kamath, Graham &amp; Emara (Chapman &amp; Hall, 2022).',
+    links: [
+      { label: 'Colab notebook', href: 'https://colab.research.google.com/drive/1jXHRzWvN3Zrlyzbt_2gFbwy4GPSltPNZ?usp=sharing' },
+    ],
+  },
+  {
+    title: 'Explainable Artificial Intelligence: An Introduction to Interpretable Machine Learning',
+    description: 'Code contributions for the textbook by Kamath &amp; Liu (Springer, 2021).',
+    links: [
+      { label: 'Colab notebook', href: 'https://colab.research.google.com/drive/1ze6OdzK8xqn1LZZL8WMoQ_UKuWqH9dQw?usp=sharing' },
+    ],
+  },
+];
+---
+
+<section id="publications" aria-labelledby="publications-heading" class="section-alt">
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <h2 id="publications-heading" class="section-heading">Publications &amp; Open Source</h2>
+
+    <div class="pub-list">
+      {publications.map((pub, idx) => (
+        <article class="pub-card" style={`animation-delay: ${idx * 0.06}s`}>
+          <div class="pub-meta">
+            {pub.venue && (
+              <span class="pub-venue">{pub.venue}{pub.year ? `, ${pub.year}` : ''}</span>
+            )}
+          </div>
+          <h3 class="pub-title">{pub.title}</h3>
+          {pub.description && (
+            <p class="pub-description" set:html={pub.description} />
+          )}
+          <div class="pub-links">
+            {pub.links.map((link) => (
+              <a href={link.href} target="_blank" rel="noopener noreferrer" class="pub-link">
+                {link.label} →
+              </a>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-alt {
+    background-color: var(--color-bg-subtle);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .pub-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .pub-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .pub-card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    animation: fadeInUp 0.4s ease forwards;
+    opacity: 0;
+  }
+
+  .pub-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .pub-meta {
+    min-height: 1rem;
+  }
+
+  .pub-venue {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-accent);
+  }
+
+  .pub-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+  }
+
+  .pub-description {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .pub-links {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .pub-link {
+    font-size: 0.825rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .pub-link:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+  }
+</style>

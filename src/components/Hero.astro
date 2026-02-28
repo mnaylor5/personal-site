@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets';
+import mitchPhoto from '../assets/mitch.jpg';
+
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mitchnaylor/', external: true },
+  { label: 'GitHub', href: 'https://www.github.com/mnaylor5', external: true },
+  { label: 'Email', href: 'mailto:mitchnaylor94@gmail.com', external: false },
+];
+---
+
+<header class="hero-section">
+  <div class="max-w-4xl mx-auto px-6 py-20 flex flex-col items-center text-center">
+    <div class="profile-photo-wrap animate-fade-in">
+      <Image
+        src={mitchPhoto}
+        alt="Photo of Mitchell Naylor"
+        width={320}
+        height={320}
+        format="webp"
+        quality={80}
+        class="profile-photo"
+      />
+    </div>
+
+    <h1 class="mt-6 text-4xl font-bold tracking-tight sm:text-5xl animate-fade-in animate-delay-1">
+      Mitchell Naylor
+    </h1>
+    <p class="mt-2 text-lg font-medium text-muted animate-fade-in animate-delay-2">
+      Staff Applied Researcher, GitHub Copilot
+    </p>
+    <p class="mt-4 text-xl max-w-lg text-muted animate-fade-in animate-delay-3">
+      Building AI that helps developers build software.
+    </p>
+
+    <nav aria-label="Social links" class="mt-8 flex gap-5 animate-fade-in animate-delay-4">
+      {socialLinks.map((link) => (
+        <a
+          href={link.href}
+          class="social-btn"
+          {...link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
+          aria-label={link.label}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .hero-section {
+    background-color: var(--color-bg-subtle);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .profile-photo-wrap {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid var(--color-border);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-btn {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .social-btn:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    background-color: var(--color-surface);
+    text-decoration: none;
+  }
+</style>
