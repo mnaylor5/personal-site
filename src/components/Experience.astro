@@ -3,6 +3,7 @@ interface Role {
   company: string;
   title: string;
   period: string;
+  summary?: string;
   bullets: string[];
   note?: string;
 }
@@ -12,20 +13,22 @@ const roles: Role[] = [
     company: 'GitHub',
     title: 'Staff Applied Researcher',
     period: 'April 2024 – Present',
+    summary: 'I work as a technical leader in GitHub Copilot\'s Applied Science team, where I lead small teams of applied researchers to execute on high-impact, cross-functional efforts to improve Copilot products. This has included:',
     bullets: [
-      'Lead an embedded team of 6 applied researchers, serving as the primary tech lead from Applied Science driving cross-functional collaboration with product, engineering, and design teams',
-      'Develop new AI-powered experiences within GitHub Copilot, leveraging cutting-edge LLMs to deliver new features for millions of developers',
-      'Design agentic systems to accomplish complex software engineering tasks, such as reviewing pull requests (see <a href="https://github.blog/changelog/2025-04-04-copilot-code-review-now-generally-available/" target="_blank" rel="noopener noreferrer">Copilot Code Review</a>)',
-      'Fine-tune LLMs using LoRA to improve code generation quality',
-      'Mentor junior team members through pairing and sharing knowledge of ML best practices',
-      'Conduct A/B tests to quantify model improvements, delivering statistically significant performance gains in production',
-      'Act as a key member of the hiring team for applied researchers, including designing technical interview material and assessing prospective team members',
+      'Post-training LLMs to improve model performance on high-priority applications',
+      'Leading efforts to use reinforcement learning (RL) for agentic tasks, including designing reward functions, training pipelines, and evaluation processes',
+      'Partnering with engineering and product teams to develop and improve early-stage products',
+      'Designing agentic systems to accomplish complex software engineering tasks, such as reviewing pull requests (see <a href="https://github.blog/changelog/2025-04-04-copilot-code-review-now-generally-available/" target="_blank" rel="noopener noreferrer">Copilot Code Review</a>)',
+      'Mentoring junior team members through pairing and sharing knowledge of ML best practices',
+      'Conducting A/B tests to quantify model improvements, and contributing to a culture of shipping quickly and rigorously',
+      'Acting as a key member of the hiring team for applied researchers, including designing technical interview material and assessing prospective team members',
     ],
   },
   {
     company: 'Azra AI',
     title: 'Lead Data Scientist',
     period: 'October 2019 – March 2024',
+    summary: 'At Azra AI, I operated as a "full-stack" data scientist, from collaborating with clinical stakeholders to leading research efforts on efficient attention mechanisms for Transformers and model pretraining.',
     bullets: [
       'Led research on efficient architectures for long-context NLP, implementing and adapting emerging methods (including MEGA architecture contribution to Hugging Face Transformers) for clinical NLP',
       'Designed pretraining and domain-adaptation pipelines, producing language models optimized for deployment on resource-constrained hardware',
@@ -72,6 +75,9 @@ const roles: Role[] = [
               </div>
               <span class="role-period">{role.period}</span>
             </div>
+            {role.summary && (
+              <p class="role-summary">{role.summary}</p>
+            )}
             <ul class="role-bullets">
               {role.bullets.map((bullet) => (
                 <li set:html={bullet} />
@@ -174,6 +180,13 @@ const roles: Role[] = [
     color: var(--color-text-muted);
     white-space: nowrap;
     padding-top: 0.15rem;
+  }
+
+  .role-summary {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text);
   }
 
   .role-bullets {
