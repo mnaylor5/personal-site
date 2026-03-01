@@ -1,4 +1,29 @@
+# R project artifacts (legacy)
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Astro build output
+dist/
+.astro/
+
+# Node.js
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# Editor directories
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
