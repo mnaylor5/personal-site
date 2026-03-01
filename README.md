@@ -1,20 +1,8 @@
 # Mitchell Naylor — Personal Site
 
-A modern personal website for Mitchell Naylor, Staff Applied Researcher at GitHub Copilot.
-
-## Stack
-
-- **Framework**: [Astro](https://astro.build/) v5 — zero client-side JavaScript, pure static HTML + CSS
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) v3 with custom CSS variables for light/dark mode
-- **Images**: Astro's built-in `<Image />` component for automatic optimization (WebP conversion, responsive sizes)
-- **Deployment**: GitHub Actions → GitHub Pages
+This GitHub repo is built to serve my personal website. It's built with [Astro](https://astro.build/) and styled with [Tailwind CSS](https://tailwindcss.com/). 
 
 ## Development
-
-### Prerequisites
-
-- Node.js 20+
-- npm
 
 ### Getting started
 
@@ -65,11 +53,3 @@ Pushes to the `master` branch automatically trigger a GitHub Actions workflow th
 
 The live site is available at: **https://mnaylor5.github.io/personal-site**
 
-## Features
-
-- **Zero JavaScript** shipped to the browser — pure static HTML + CSS
-- **Dark/light mode** respecting `prefers-color-scheme` via CSS variables (no JS toggle needed)
-- **Responsive** layout for mobile, tablet, and desktop
-- **Accessible** — semantic HTML5, proper heading hierarchy, ARIA labels
-- **Optimized images** — the 9.7 MB `mitch.jpg` is converted to WebP and resized at build time
-- **Subtle CSS animations** — fade-in effects, no JS animation frameworks
