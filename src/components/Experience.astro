@@ -74,31 +74,34 @@ const roles: Role[] = [
     <h2 id="experience-heading" class="section-heading">Experience</h2>
 
     <div class="timeline">
-      {roles.map((role, idx) => (
-        <article class="timeline-item" style={`animation-delay: ${idx * 0.08}s`}>
-          <div class="timeline-marker" aria-hidden="true"></div>
-          <div class="timeline-content">
-            <div class="role-header">
-              <div>
-                <h3 class="role-company">{role.company}</h3>
-                <p class="role-title">{role.title}</p>
+      {roles.map((role, idx) => {
+        const isCurrent = role.period.includes('Present');
+        return (
+          <article class={`timeline-item${isCurrent ? ' is-current' : ''}`} style={`animation-delay: ${idx * 0.08}s`}>
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="role-header">
+                <div>
+                  <h3 class="role-company">{role.company}</h3>
+                  <p class="role-title">{role.title}</p>
+                </div>
+                <span class="role-period">{role.period}</span>
               </div>
-              <span class="role-period">{role.period}</span>
+              {role.summary && (
+                <p class="role-summary">{role.summary}</p>
+              )}
+              <ul class="role-bullets">
+                {role.bullets.map((bullet) => (
+                  <li set:html={bullet} />
+                ))}
+              </ul>
+              {role.note && (
+                <p class="role-note">Note: {role.note}</p>
+              )}
             </div>
-            {role.summary && (
-              <p class="role-summary">{role.summary}</p>
-            )}
-            <ul class="role-bullets">
-              {role.bullets.map((bullet) => (
-                <li set:html={bullet} />
-              ))}
-            </ul>
-            {role.note && (
-              <p class="role-note">Note: {role.note}</p>
-            )}
-          </div>
-        </article>
-      ))}
+          </article>
+        );
+      })}
     </div>
   </div>
 </section>
@@ -150,6 +153,28 @@ const roles: Role[] = [
     background-color: var(--color-accent);
     border: 2px solid var(--color-bg);
     box-shadow: 0 0 0 2px var(--color-border);
+  }
+
+  /* Current role: a subtle pulsing halo to draw a gentle eye */
+  .timeline-item.is-current .timeline-marker {
+    box-shadow: 0 0 0 2px var(--color-accent);
+    animation: markerPulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes markerPulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 2px var(--color-accent), 0 0 0 0 color-mix(in srgb, var(--color-accent) 45%, transparent);
+    }
+    50% {
+      box-shadow: 0 0 0 2px var(--color-accent), 0 0 0 8px color-mix(in srgb, var(--color-accent) 0%, transparent);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .timeline-item.is-current .timeline-marker {
+      animation: none;
+    }
   }
 
   .timeline-content {
