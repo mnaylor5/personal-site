@@ -24,7 +24,9 @@ const sections = [
   .section-nav {
     position: fixed;
     top: 50%;
-    left: 1.5rem;
+    /* Anchor to the left gutter of the centered content column (max-w-4xl = 56rem),
+       so it never collides with the text as the viewport narrows. */
+    right: calc(50% + 28rem + 1.5rem);
     transform: translateY(-50%);
     z-index: 50;
   }
@@ -85,8 +87,8 @@ const sections = [
     font-weight: 600;
   }
 
-  /* Hide on smaller screens where it would crowd the content */
-  @media (max-width: 1024px) {
+  /* Hide when the side gutter is too thin to hold the nav without crowding */
+  @media (max-width: 1200px) {
     .section-nav {
       display: none;
     }
