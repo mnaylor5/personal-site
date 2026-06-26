@@ -1,0 +1,157 @@
+---
+const sections = [
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'publications', label: 'Publications' },
+  { id: 'education', label: 'Education' },
+];
+---
+
+<nav class="section-nav" aria-label="Page sections">
+  <ul>
+    {sections.map((section) => (
+      <li>
+        <a href={`#${section.id}`} data-section-link={section.id}>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="label">{section.label}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .section-nav {
+    position: fixed;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
+    z-index: 50;
+  }
+
+  .section-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .section-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.625rem;
+    text-decoration: none;
+    padding: 0.25rem;
+  }
+
+  .dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-text-muted);
+    background-color: transparent;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .label {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    transition: color 0.15s ease;
+  }
+
+  .section-nav a:hover .dot,
+  .section-nav a:focus-visible .dot {
+    border-color: var(--color-accent);
+    transform: scale(1.15);
+  }
+
+  .section-nav a:hover .label,
+  .section-nav a:focus-visible .label {
+    color: var(--color-text);
+  }
+
+  .section-nav a.is-active .dot {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .section-nav a.is-active .label {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  /* Hide on smaller screens where it would crowd the content */
+  @media (max-width: 1024px) {
+    .section-nav {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dot,
+    .label {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const links = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>('[data-section-link]')
+  );
+
+  const linkById = new Map(
+    links.map((link) => [link.dataset.sectionLink, link])
+  );
+
+  const sections = links
+    .map((link) => document.getElementById(link.dataset.sectionLink ?? ''))
+    .filter((el): el is HTMLElement => el !== null);
+
+  const setActive = (id: string) => {
+    links.forEach((link) =>
+      link.classList.toggle('is-active', link.dataset.sectionLink === id)
+    );
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      // When the page is scrolled to the bottom, the last section may be too
+      // short to reach the viewport's middle line, so force it active.
+      if (isAtBottom()) {
+        const last = sections[sections.length - 1];
+        if (last) setActive(last.id);
+        return;
+      }
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      });
+    },
+    {
+      // Trigger when a section crosses the vertical middle of the viewport
+      rootMargin: '-45% 0px -55% 0px',
+      threshold: 0,
+    }
+  );
+
+  const isAtBottom = () =>
+    window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+
+  const handleScroll = () => {
+    if (isAtBottom()) {
+      const last = sections[sections.length - 1];
+      if (last) setActive(last.id);
+    }
+  };
+
+  sections.forEach((section) => observer.observe(section));
+  window.addEventListener('scroll', handleScroll, { passive: true });
+</script>
