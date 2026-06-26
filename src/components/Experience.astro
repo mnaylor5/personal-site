@@ -4,7 +4,7 @@ interface Role {
   title: string;
   period: string;
   summary?: string;
-  bullets: string[];
+  bullets?: string[];
   note?: string;
 }
 
@@ -14,10 +14,6 @@ const roles: Role[] = [
     title: 'Member of Technical Staff',
     period: 'July 2026 – Present',
     summary: 'Post-training code models!',
-    bullets: [
-      'Experimenting with post-training recipes (SFT and RL) to improve code model performance',
-      'Improving speed and reliability of training pipelines',
-    ],
   },
   {
     company: 'GitHub',
@@ -90,11 +86,13 @@ const roles: Role[] = [
               {role.summary && (
                 <p class="role-summary">{role.summary}</p>
               )}
-              <ul class="role-bullets">
-                {role.bullets.map((bullet) => (
-                  <li set:html={bullet} />
-                ))}
-              </ul>
+              {role.bullets && role.bullets.length > 0 && (
+                <ul class="role-bullets">
+                  {role.bullets.map((bullet) => (
+                    <li set:html={bullet} />
+                  ))}
+                </ul>
+              )}
               {role.note && (
                 <p class="role-note">Note: {role.note}</p>
               )}
