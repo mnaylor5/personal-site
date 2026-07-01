@@ -39,7 +39,10 @@
 /* ─── Base styles ─── */
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  /* Hanken Grotesk has a smaller x-height and lighter stroke than the old
+     system stack, so nudge the root up to keep body copy comfortable on
+     large monitors. Everything sized in rem scales proportionally. */
+  font-size: 17px;
 }
 
 body {
