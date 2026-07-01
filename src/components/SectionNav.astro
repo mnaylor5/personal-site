@@ -294,4 +294,14 @@ const sections = [
 
   sections.forEach((section) => observer.observe(section));
   window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Anchor the rail at the top of the page: highlight the first section on
+  // load so the rail never floats with every dot inactive. Skip the chip so
+  // it doesn't flash on mobile page loads.
+  if (window.scrollY < 40 && sectionIds[0]) {
+    activeId = sectionIds[0];
+    links.forEach((link) =>
+      link.classList.toggle('is-active', link.dataset.sectionLink === sectionIds[0])
+    );
+  }
 </script>
