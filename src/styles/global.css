@@ -23,10 +23,11 @@
     BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* Hero: the site's one committed-color moment. In light mode a deep
-   evergreen band carries the signature green as a *surface*, not just ink.
-   In dark mode a full green block would fight the near-black body, so the
-   hero becomes a restrained, subtly green-tinted elevated panel instead. */
+/* Hero: the site's one committed-color moment — but only in light mode,
+   where a deep evergreen band carries the signature green as a *surface*.
+   In dark mode that green block fights the near-black page, so the hero
+   drops the tint entirely and blends into the neutral dark body; the mint
+   accent (rule, hover) still ties it to the rest of the dark theme. */
 :root {
   --hero-bg: oklch(0.37 0.09 159);
   --hero-bg-deep: oklch(0.32 0.085 162);
@@ -39,8 +40,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --hero-bg: oklch(0.24 0.035 162);
-    --hero-bg-deep: oklch(0.2 0.03 164);
+    --hero-bg: oklch(0.18 0.012 165);
+    --hero-bg-deep: oklch(0.18 0.012 165);
+    --hero-text: oklch(0.94 0.012 158);
+    --hero-text-muted: oklch(0.74 0.018 158);
     --hero-accent: oklch(0.82 0.13 158);
     --hero-border: oklch(1 0 0 / 0.14);
     --hero-surface: oklch(1 0 0 / 0.07);
