@@ -185,4 +185,11 @@ const publications: Publication[] = [
     color: var(--color-accent-hover);
     text-decoration: underline;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pub-card {
+      animation: none;
+      opacity: 1;
+    }
+  }
 </style>

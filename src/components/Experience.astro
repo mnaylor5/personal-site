@@ -170,6 +170,11 @@ const roles: Role[] = [
   }
 
   @media (prefers-reduced-motion: reduce) {
+    .timeline-item {
+      animation: none;
+      opacity: 1;
+    }
+
     .timeline-item.is-current .timeline-marker {
       animation: none;
     }

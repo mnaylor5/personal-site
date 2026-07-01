@@ -192,6 +192,7 @@ const sections = [
   // --- Scroll-wheel / swipe stepping over the rail (mobile) ---
   const nav = document.querySelector<HTMLElement>('.section-nav');
   const mobileQuery = window.matchMedia('(max-width: 1200px)');
+  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   const sectionIds = links.map((l) => l.dataset.sectionLink ?? '');
 
   let isCoolingDown = false;
@@ -211,7 +212,10 @@ const sections = [
     if (next === current) return;
     cooldown();
     setActive(sectionIds[next]);
-    sections[next].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    sections[next].scrollIntoView({
+      behavior: reducedMotionQuery.matches ? 'auto' : 'smooth',
+      block: 'start',
+    });
   };
 
   let wheelAccum = 0;
