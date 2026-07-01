@@ -28,8 +28,8 @@
    the signature, while the body below stays restrained and near-neutral.
    The green is finally carried by a *surface*, not just by ink. */
 :root {
-  --hero-bg: oklch(0.43 0.1 158);
-  --hero-bg-deep: oklch(0.37 0.095 161);
+  --hero-bg: oklch(0.37 0.09 159);
+  --hero-bg-deep: oklch(0.32 0.085 162);
   --hero-text: oklch(0.98 0.006 160);
   --hero-text-muted: oklch(0.87 0.03 160);
   --hero-accent: oklch(0.87 0.15 158);
