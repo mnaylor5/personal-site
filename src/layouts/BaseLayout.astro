@@ -7,8 +7,8 @@ export interface Props {
 }
 
 const {
-  title = 'Mitchell Naylor — Staff Applied Researcher, GitHub Copilot',
-  description = 'Mitchell Naylor is a machine learning and AI scientist at GitHub, leading applied research for GitHub Copilot.',
+  title = 'Mitchell Naylor — Member of Technical Staff, Cohere',
+  description = 'Mitchell Naylor is a machine learning and AI scientist and Member of Technical Staff at Cohere, working on post-training research for coding models.',
 } = Astro.props;
 ---
 
@@ -19,6 +19,14 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="author" content="Mitchell Naylor" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
+    />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
