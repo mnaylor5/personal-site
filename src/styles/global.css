@@ -4,15 +4,16 @@
 
 /* ─── Design tokens ───
    Signature palette: a grounded pine/evergreen — Chattanooga hills, not the
-   default developer-portfolio blue. Built in OKLCH so light and dark share a
-   single hue and stay perceptually even. */
+   default developer-portfolio blue. Green lives in the accents; the reading
+   surfaces stay near-neutral so the page reads crisp, not washed. Built in
+   OKLCH so light and dark share a single hue and stay perceptually even. */
 :root {
-  --color-bg: oklch(0.99 0.004 155);
-  --color-bg-subtle: oklch(0.965 0.008 155);
-  --color-surface: oklch(0.935 0.012 155);
-  --color-border: oklch(0.885 0.016 155);
-  --color-text: oklch(0.26 0.025 165);
-  --color-text-muted: oklch(0.47 0.028 165);
+  --color-bg: oklch(0.995 0.001 160);
+  --color-bg-subtle: oklch(0.972 0.004 160);
+  --color-surface: oklch(0.945 0.007 160);
+  --color-border: oklch(0.9 0.009 160);
+  --color-text: oklch(0.24 0.02 165);
+  --color-text-muted: oklch(0.46 0.022 165);
   --color-accent: oklch(0.48 0.11 158);
   --color-accent-hover: oklch(0.4 0.11 158);
   --color-accent-soft: oklch(0.48 0.11 158 / 0.12);
