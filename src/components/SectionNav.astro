@@ -88,6 +88,29 @@ const sections = [
     font-weight: 600;
   }
 
+  /* Dots that currently overlap the deep-pine hero flip to light styling so
+     they stay legible; the rest keep the dark-on-white treatment. Toggled
+     per-dot because the rail can straddle the hero/body boundary. */
+  .section-nav a.on-pine .dot {
+    border-color: oklch(1 0 0 / 0.55);
+  }
+
+  .section-nav a.on-pine:hover .dot,
+  .section-nav a.on-pine:focus-visible .dot,
+  .section-nav a.on-pine.is-active .dot {
+    background-color: var(--hero-accent);
+    border-color: var(--hero-accent);
+  }
+
+  .section-nav a.on-pine .label {
+    color: oklch(1 0 0 / 0.68);
+  }
+
+  .section-nav a.on-pine:hover .label,
+  .section-nav a.on-pine.is-active .label {
+    color: var(--hero-text);
+  }
+
   /* Transient label chip shown on mobile when the active section changes/taps.
      Has its own background so it stays legible while overlapping content. */
   .active-chip {
@@ -260,6 +283,23 @@ const sections = [
   nav?.addEventListener('touchend', () => {
     touchStartY = null;
   });
+
+  // --- Flip individual rail dots to light styling while they overlap the
+  // pine hero (the rail can straddle the hero/body boundary at the top). ---
+  const heroEl = document.querySelector<HTMLElement>('.hero-section');
+  const updateRailTheme = () => {
+    if (!heroEl) return;
+    const heroBottom = heroEl.getBoundingClientRect().bottom;
+    links.forEach((link) => {
+      const dot = link.querySelector('.dot');
+      if (!dot) return;
+      const r = dot.getBoundingClientRect();
+      link.classList.toggle('on-pine', r.top + r.height / 2 < heroBottom);
+    });
+  };
+  updateRailTheme();
+  window.addEventListener('scroll', updateRailTheme, { passive: true });
+  window.addEventListener('resize', updateRailTheme);
 
   const observer = new IntersectionObserver(
     (entries) => {

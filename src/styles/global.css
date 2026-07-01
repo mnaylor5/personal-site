@@ -23,6 +23,20 @@
     BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+/* Hero: the site's one committed-color moment. A deep evergreen band with
+   light type — held constant across light and dark so it always reads as
+   the signature, while the body below stays restrained and near-neutral.
+   The green is finally carried by a *surface*, not just by ink. */
+:root {
+  --hero-bg: oklch(0.31 0.062 160);
+  --hero-bg-deep: oklch(0.25 0.058 164);
+  --hero-text: oklch(0.97 0.006 160);
+  --hero-text-muted: oklch(0.85 0.026 160);
+  --hero-accent: oklch(0.84 0.13 158);
+  --hero-border: oklch(1 0 0 / 0.18);
+  --hero-surface: oklch(1 0 0 / 0.08);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: oklch(0.18 0.012 165);
