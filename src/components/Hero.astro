@@ -10,7 +10,7 @@ const socialLinks = [
 ---
 
 <header class="hero-section">
-  <div class="max-w-[var(--content-prose)] mx-auto px-6 pt-12 pb-8 flex flex-col items-center text-center">
+  <div class="max-w-[var(--content-prose)] mx-auto px-6 pt-8 pb-8 flex flex-col items-center text-center">
     <div class="profile-photo-wrap animate-fade-in">
       <Image
         src={mitchPhoto}
@@ -32,7 +32,7 @@ const socialLinks = [
       Post-training research for coding models.
     </p>
 
-    <nav aria-label="Social links" class="mt-8 flex gap-5 animate-fade-in animate-delay-4">
+    <nav aria-label="Social links" class="mt-6 flex gap-5 animate-fade-in animate-delay-4">
       {socialLinks.map((link) => (
         <a
           href={link.href}
@@ -59,7 +59,7 @@ const socialLinks = [
   }
 
   .hero-name {
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
     font-size: clamp(2.25rem, 3vw + 1.25rem, 3rem);
     font-weight: 800;
     line-height: 1.05;
@@ -73,7 +73,7 @@ const socialLinks = [
     height: 3px;
     margin: 1rem 0 0;
     border-radius: 9999px;
-    background-color: var(--hero-accent);
+    background-color: oklch(1 0 0 / 0.4);
   }
 
   .hero-role {
@@ -93,13 +93,13 @@ const socialLinks = [
   }
 
   .profile-photo-wrap {
-    width: 160px;
-    height: 160px;
+    width: 128px;
+    height: 128px;
   }
 
   .profile-photo {
-    width: 160px;
-    height: 160px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
@@ -121,12 +121,12 @@ const socialLinks = [
 
   .social-btn:hover {
     color: var(--hero-text);
-    border-color: var(--hero-accent);
+    border-color: oklch(1 0 0 / 0.55);
     background-color: var(--hero-surface);
     text-decoration: none;
   }
 
   .social-btn:focus-visible {
-    outline-color: var(--hero-accent);
+    outline-color: oklch(1 0 0 / 0.7);
   }
 </style>
