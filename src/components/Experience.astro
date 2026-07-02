@@ -21,13 +21,10 @@ const roles: Role[] = [
     period: 'April 2024 – July 2026',
     summary: 'I worked as a technical leader in GitHub Copilot\'s Applied Science team, leading small teams of applied researchers to execute on high-impact, cross-functional efforts to improve Copilot products. This included:',
     bullets: [
-      'Post-training LLMs to improve model performance on high-priority applications',
-      'Leading efforts to use reinforcement learning (RL) for agentic tasks, including designing reward functions, training pipelines, and evaluation processes',
-      'Partnering with engineering and product teams to develop and improve early-stage products',
-      'Designing agentic systems to accomplish complex software engineering tasks, such as reviewing pull requests (see <a href="https://github.blog/changelog/2025-04-04-copilot-code-review-now-generally-available/" target="_blank" rel="noopener noreferrer">Copilot Code Review</a>)',
-      'Mentoring junior team members through pairing and sharing knowledge of ML best practices',
-      'Conducting A/B tests to quantify model improvements, and contributing to a culture of shipping quickly and rigorously',
-      'Acting as a key member of the hiring team for applied researchers, including designing technical interview material and assessing prospective team members',
+      'Post-training LLMs (RL and SFT) to lift model performance on high-priority Copilot applications, including leading the use of reinforcement learning for agentic tasks — designing reward functions, training pipelines, and evaluation',
+      'Designing agentic systems for complex software-engineering tasks such as reviewing pull requests (see <a href="https://github.blog/changelog/2025-04-04-copilot-code-review-now-generally-available/" target="_blank" rel="noopener noreferrer">Copilot Code Review</a>), partnering closely with engineering and product to ship early-stage products',
+      'Running A/B tests to quantify model improvements, contributing to a culture of shipping quickly and rigorously',
+      'Mentoring researchers and helping grow the team — pairing on ML best practices and designing technical interview material',
     ],
   },
   {
@@ -39,8 +36,7 @@ const roles: Role[] = [
       'Led research on efficient architectures for long-context NLP, implementing and adapting emerging methods (including MEGA architecture contribution to Hugging Face Transformers) for clinical NLP',
       'Designed pretraining and domain-adaptation pipelines, producing language models optimized for deployment on resource-constrained hardware',
       'Built and deployed clinical NLP models (NER, classification) identifying high-risk findings for 200k+ patients annually, enabling early detection and faster treatment',
-      'Drove technical strategy for ML product development, evaluating cutting-edge research and rapidly prototyping novel architectures for production deployment',
-      'Collaborated with clinical stakeholders to ensure model accuracy and reliability met the high standards required for cancer detection workflows',
+      'Drove technical strategy for ML product development in close collaboration with clinical stakeholders — evaluating cutting-edge research and rapidly prototyping architectures that met the accuracy and reliability required for cancer-detection workflows',
     ],
     note: 'Azra AI spun out as a standalone company in January 2022, previously part of Digital Reasoning',
   },
@@ -48,25 +44,19 @@ const roles: Role[] = [
     company: 'Asurion',
     title: 'Data Scientist',
     period: 'March 2018 – October 2019',
-    bullets: [
-      'Applied methods from NLP, statistical inference, and operations research to solve a diverse set of business problems',
-      'Communicated findings to stakeholders ranging from highly technical to C-level',
-    ],
+    summary: 'Applied methods from NLP, statistical inference, and operations research to a diverse set of business problems, communicating findings to audiences ranging from highly technical to C-level.',
   },
   {
     company: 'GEICO',
     title: 'Product Modeling Analyst III',
     period: 'June 2016 – March 2018',
-    bullets: [
-      'Built predictive models for customer behavior under various pricing scenarios',
-      'Conducted robust statistical analyses in support of pricing department',
-    ],
+    summary: 'Built predictive models of customer behavior under various pricing scenarios and ran robust statistical analyses in support of the pricing department.',
   },
 ];
 ---
 
 <section id="experience" aria-labelledby="experience-heading">
-  <div class="max-w-4xl mx-auto px-6 pt-8 pb-16">
+  <div class="max-w-[42rem] mx-auto px-6 pt-8 pb-16">
     <h2 id="experience-heading" class="section-heading">Experience</h2>
 
     <div class="timeline">
@@ -208,7 +198,7 @@ const roles: Role[] = [
 
   .role-title {
     font-size: 0.95rem;
-    color: var(--color-accent);
+    color: var(--color-text);
     font-weight: 500;
     margin-top: 0.1rem;
   }
