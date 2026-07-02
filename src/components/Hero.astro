@@ -10,7 +10,7 @@ const socialLinks = [
 ---
 
 <header class="hero-section">
-  <div class="max-w-4xl mx-auto px-6 py-20 pb-8 pt-12 flex flex-col items-center text-center">
+  <div class="max-w-[var(--content-prose)] mx-auto px-6 pt-8 pb-8 flex flex-col items-center text-center">
     <div class="profile-photo-wrap animate-fade-in">
       <Image
         src={mitchPhoto}
@@ -23,17 +23,16 @@ const socialLinks = [
       />
     </div>
 
-    <h1 class="mt-6 text-4xl font-bold tracking-tight sm:text-5xl animate-fade-in animate-delay-1">
-      Mitchell Naylor
-    </h1>
-    <p class="mt-2 text-lg font-medium text-muted animate-fade-in animate-delay-2">
-      Member of Technical Staff, Cohere
+    <h1 class="hero-name animate-fade-in animate-delay-1">Mitchell Naylor</h1>
+    <span class="hero-rule animate-fade-in animate-delay-2" aria-hidden="true"></span>
+    <p class="hero-role animate-fade-in animate-delay-2">
+      Member of Technical Staff · Cohere
     </p>
-    <p class="mt-4 text-xl max-w-lg text-muted animate-fade-in animate-delay-3">
+    <p class="hero-tagline animate-fade-in animate-delay-3">
       Post-training research for coding models.
     </p>
 
-    <nav aria-label="Social links" class="mt-8 flex gap-5 animate-fade-in animate-delay-4">
+    <nav aria-label="Social links" class="mt-6 flex gap-5 animate-fade-in animate-delay-4">
       {socialLinks.map((link) => (
         <a
           href={link.href}
@@ -50,41 +49,84 @@ const socialLinks = [
 
 <style>
   .hero-section {
-    background-color: var(--color-bg-subtle);
-    border-bottom: 1px solid var(--color-border);
+    background-color: var(--hero-bg);
+    background-image: radial-gradient(
+      120% 140% at 50% 0%,
+      var(--hero-bg) 0%,
+      var(--hero-bg-deep) 100%
+    );
+    color: var(--hero-text);
+  }
+
+  .hero-name {
+    margin-top: 1.25rem;
+    font-size: clamp(2.25rem, 3vw + 1.25rem, 3rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--hero-text);
+  }
+
+  .hero-rule {
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    margin: 1rem 0 0;
+    border-radius: 9999px;
+    background-color: oklch(1 0 0 / 0.4);
+  }
+
+  .hero-role {
+    margin-top: 1rem;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: var(--hero-text);
+  }
+
+  .hero-tagline {
+    margin-top: 0.4rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var(--hero-text-muted);
+    text-wrap: balance;
   }
 
   .profile-photo-wrap {
-    width: 160px;
-    height: 160px;
+    width: 128px;
+    height: 128px;
   }
 
   .profile-photo {
-    width: 160px;
-    height: 160px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
-    border: 3px solid var(--color-border);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    border: 3px solid oklch(1 0 0 / 0.9);
+    box-shadow: 0 0 0 1px var(--hero-border), 0 12px 32px oklch(0 0 0 / 0.35);
   }
 
   .social-btn {
     display: inline-block;
     padding: 0.5rem 1.25rem;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--hero-border);
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--color-text-muted);
+    color: oklch(0.92 0.02 160);
     text-decoration: none;
     transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
   }
 
   .social-btn:hover {
-    color: var(--color-accent);
-    border-color: var(--color-accent);
-    background-color: var(--color-surface);
+    color: var(--hero-text);
+    border-color: oklch(1 0 0 / 0.55);
+    background-color: var(--hero-surface);
     text-decoration: none;
+  }
+
+  .social-btn:focus-visible {
+    outline-color: oklch(1 0 0 / 0.7);
   }
 </style>

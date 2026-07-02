@@ -2,44 +2,121 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── CSS custom properties for color scheme ─── */
+/* ─── Design tokens ───
+   Signature palette: a grounded pine/evergreen — Chattanooga hills, not the
+   default developer-portfolio blue. Green lives in the accents; the reading
+   surfaces stay near-neutral so the page reads crisp, not washed. Built in
+   OKLCH so light and dark share a single hue and stay perceptually even. */
 :root {
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f8f9fa;
-  --color-surface: #f1f3f5;
-  --color-border: #dee2e6;
-  --color-text: #1a1a2e;
-  --color-text-muted: #6c757d;
-  --color-accent: #0969da;
-  --color-accent-hover: #0550ae;
+  --color-bg: oklch(0.995 0.001 160);
+  --color-bg-subtle: oklch(0.972 0.004 160);
+  --color-surface: oklch(0.945 0.007 160);
+  --color-border: oklch(0.9 0.009 160);
+  --color-text: oklch(0.24 0.02 165);
+  --color-text-muted: oklch(0.46 0.022 165);
+  --color-accent: oklch(0.48 0.11 158);
+  --color-accent-hover: oklch(0.4 0.11 158);
+  --color-accent-soft: oklch(0.48 0.11 158 / 0.12);
+
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ─── Layout widths ───
+     Single source of truth for the content column. Prose sections stay at a
+     readable ~72ch; card grids (Publications, Education) breathe wider so the
+     cards don't cramp. */
+  --content-prose: 42rem;
+  --content-wide: 50rem;
+}
+
+/* Hero: the site's one committed-color moment — but only in light mode,
+   where a deep evergreen band carries the signature green as a *surface*.
+   In dark mode that green block fights the near-black page, so the hero
+   drops the tint entirely and blends into the neutral dark body; the mint
+   accent (rule, hover) still ties it to the rest of the dark theme. */
+:root {
+  --hero-bg: oklch(0.37 0.09 159);
+  --hero-bg-deep: oklch(0.32 0.085 162);
+  --hero-text: oklch(0.98 0.006 160);
+  --hero-text-muted: oklch(0.87 0.03 160);
+  --hero-border: oklch(1 0 0 / 0.2);
+  --hero-surface: oklch(1 0 0 / 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0d1117;
-    --color-bg-subtle: #161b22;
-    --color-surface: #21262d;
-    --color-border: #30363d;
-    --color-text: #e6edf3;
-    --color-text-muted: #8b949e;
-    --color-accent: #58a6ff;
-    --color-accent-hover: #79c0ff;
+    --hero-bg: oklch(0.18 0.012 165);
+    --hero-bg-deep: oklch(0.18 0.012 165);
+    --hero-text: oklch(0.94 0.012 158);
+    --hero-text-muted: oklch(0.74 0.018 158);
+    --hero-border: oklch(1 0 0 / 0.14);
+    --hero-surface: oklch(1 0 0 / 0.07);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: oklch(0.18 0.012 165);
+    --color-bg-subtle: oklch(0.215 0.016 165);
+    --color-surface: oklch(0.255 0.02 165);
+    --color-border: oklch(0.33 0.022 165);
+    --color-text: oklch(0.94 0.012 158);
+    --color-text-muted: oklch(0.74 0.018 158);
+    --color-accent: oklch(0.82 0.13 158);
+    --color-accent-hover: oklch(0.88 0.12 158);
+    --color-accent-soft: oklch(0.82 0.13 158 / 0.16);
   }
 }
 
 /* ─── Base styles ─── */
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  /* Hanken Grotesk has a smaller x-height and lighter stroke than the old
+     system stack, so nudge the root up to keep body copy comfortable on
+     large monitors. Everything sized in rem scales proportionally. */
+  font-size: 17px;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
-    Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Display type carries the brand voice on names and section headings. */
+h1,
+h2,
+h3,
+.section-heading {
+  font-family: var(--font-display);
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* Signature accent tick under every section heading, layered over the
+   existing full-width hairline the components already draw. */
+.section-heading {
+  position: relative;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 2.75rem;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: 9999px;
 }
 
 /* ─── Utility classes ─── */
@@ -74,6 +151,25 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Consistent, on-brand keyboard focus ring across every link and pill,
+   instead of the faint UA default. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Inline code (e.g. library names) shouldn't read as raw unstyled monospace
+   on an otherwise all-sans page. Give it a whisper of the accent tint. */
+code {
+  font-family: ui-monospace, 'SF Mono', 'SFMono-Regular', 'Menlo', monospace;
+  font-size: 0.88em;
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+  background-color: var(--color-accent-soft);
+  color: var(--color-text);
+}
+
 /* ─── Section divider ─── */
 .section-divider {
   border-top: 1px solid var(--color-border);
@@ -99,3 +195,21 @@ a:hover {
 .animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
 .animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
 .animate-delay-4 { animation-delay: 0.4s; opacity: 0; }
+
+/* Reduced motion: no entrance choreography, no smooth scroll. Content must
+   land fully visible — never leave opacity stuck at 0 with the animation off. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-in,
+  .animate-delay-1,
+  .animate-delay-2,
+  .animate-delay-3,
+  .animate-delay-4 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
