@@ -21,6 +21,16 @@
   --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ─── Layout widths ───
+     Single source of truth for the content column. Prose sections stay at a
+     readable ~72ch; card grids (Publications, Education) breathe wider so the
+     cards don't cramp. The fixed section-nav rail derives its offset from
+     --content-wide so it can never collide with the widest section — change
+     these here and the rail follows. */
+  --content-prose: 42rem;
+  --content-wide: 50rem;
+  --content-rail-gap: 2.5rem;
 }
 
 /* Hero: the site's one committed-color moment — but only in light mode,
