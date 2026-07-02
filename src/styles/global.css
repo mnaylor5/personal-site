@@ -43,7 +43,6 @@
   --hero-bg-deep: oklch(0.32 0.085 162);
   --hero-text: oklch(0.98 0.006 160);
   --hero-text-muted: oklch(0.87 0.03 160);
-  --hero-accent: oklch(0.87 0.15 158);
   --hero-border: oklch(1 0 0 / 0.2);
   --hero-surface: oklch(1 0 0 / 0.1);
 }
@@ -54,7 +53,6 @@
     --hero-bg-deep: oklch(0.18 0.012 165);
     --hero-text: oklch(0.94 0.012 158);
     --hero-text-muted: oklch(0.74 0.018 158);
-    --hero-accent: oklch(0.82 0.13 158);
     --hero-border: oklch(1 0 0 / 0.14);
     --hero-surface: oklch(1 0 0 / 0.07);
   }
