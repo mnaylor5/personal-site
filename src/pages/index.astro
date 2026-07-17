@@ -11,19 +11,15 @@ import Education from '../components/Education.astro';
 
   <!-- About -->
   <section id="about" aria-labelledby="about-heading">
-    <div class="max-w-4xl mx-auto px-6 pt-12 pb-8">
+    <div class="max-w-[var(--content-prose)] mx-auto px-6 pt-12 pb-8">
       <h2 id="about-heading" class="section-heading">About</h2>
       <div class="about-content">
         <p class="about-bio">
           Mitch Naylor is a machine learning and AI scientist with extensive experience in natural
           language processing (NLP), statistical modeling, and deep learning. Mitch currently works
-          as a staff applied researcher at GitHub, where he leads a team of machine learning
-          scientists to develop new AI-powered products and improve existing features within GitHub
-          Copilot. Mitch is also an author of{' '}
-          <a href="https://appliedcausalinference.github.io/aci_book/" target="_blank" rel="noopener noreferrer">
-            <em>Applied Causal Inference</em>
-          </a>
-          , which released in August 2023.
+          as a member of technical staff at Cohere, where he works on all things related to post-training
+          LLMs for code. Mitch is also an author of{' '}
+          <a href="https://appliedcausalinference.github.io/aci_book/" target="_blank" rel="noopener noreferrer"><em>Applied Causal Inference</em></a>, released August 2023.
         </p>
         <p class="about-interests">
           Mitch lives in Chattanooga, TN. Outside of work, he enjoys rock climbing, hiking, music,
@@ -40,7 +36,7 @@ import Education from '../components/Education.astro';
   <Education />
 
   <footer class="site-footer">
-    <div class="max-w-4xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="max-w-[var(--content-prose)] mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="footer-copy">&copy; 2026 Mitchell Naylor</p>
       <nav aria-label="Footer links" class="flex gap-4">
         <a href="https://www.linkedin.com/in/mitchnaylor/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
@@ -65,19 +61,18 @@ import Education from '../components/Education.astro';
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 0 0.5rem;
   }
 
   .about-bio,
   .about-interests {
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.75;
     color: var(--color-text);
-    text-align: justify;
+    text-align: left;
+    text-wrap: pretty;
   }
 
   .site-footer {
-    background-color: var(--color-bg-subtle);
     border-top: 1px solid var(--color-border);
   }
 
@@ -90,6 +85,7 @@ import Education from '../components/Education.astro';
     font-size: 0.85rem;
     color: var(--color-text-muted);
     text-decoration: none;
+    padding-block: 0.25rem;
     transition: color 0.15s ease;
   }
 
