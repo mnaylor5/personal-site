@@ -11,9 +11,15 @@ interface Role {
 const roles: Role[] = [
   {
     company: 'Cohere',
-    title: 'Member of Technical Staff',
+    title: 'Senior Member of Technical Staff',
     period: 'July 2026 – Present',
-    summary: 'I am joining Cohere as a Member of Technical Staff on the post-training team for coding models. This includes experimentation on model training (RL and SFT), as well as the environments and infrastructure which make RL possible.',
+    summary: 'I work as an IC leader on the post-training team responsible for improving coding capabilities. This includes:',
+    bullets: [
+      'Contributing to Cohere\'s large scale model training efforts, with the goal of producing frontier-quality LLMs',
+      'Designing and executing RL experiments to improve performance in coding settings',
+      'Building pipelines to generate high quality synthetic RL environments and tasks',
+      'Developing tools to audit and improve training data quality'
+    ]
   },
   {
     company: 'GitHub',
